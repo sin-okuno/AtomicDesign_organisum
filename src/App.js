@@ -1,6 +1,9 @@
 import "./styles.css";
 import { SearchInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
+import { HeaderOnlyLayout } from "./components/template/HeaderOnlyLayout";
+import { DefaultLayout } from "./components/template/DefaultLayout";
+import { BrowserRouter } from "react-router-dom";
 
 export default function App() {
   const user = {
@@ -11,9 +14,11 @@ export default function App() {
     weight: "80"
   };
   return (
-    <div className="App">
-      <SearchInput />
-      <UserCard user={user} />
-    </div>
+    <BrowserRouter>
+      <DefaultLayout>
+        <SearchInput />
+        <UserCard user={user} />
+      </DefaultLayout>
+    </BrowserRouter>
   );
 }
