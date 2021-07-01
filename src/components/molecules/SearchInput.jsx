@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { PrimaryButton } from "../atoms/buttoms/PrimaryButton";
 import { Input } from "../atoms/input/Input";
 
